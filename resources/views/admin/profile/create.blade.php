@@ -1,6 +1,26 @@
-<div class="home-description">
-    <p>Create</p>
+@extends('layouts.app', ['title' => 'Profile'])
 
-    <div class="mt-3">
+@section('content')
+<section class="main-content container ">
+    <div class="d-flex align-items-center mb-3">
+        <p class="fs-5 fw-bold text-dark me-auto">Create a Profile</p>
+        <a href="{{route('admin.profile.index')}}" class="btn btn-secondary btn-sm">Cancel</a>
     </div>
-</div>
+    <form method="post" action="{{route('admin.profile.store')}}">
+        @csrf
+        <div class="mb-3">
+            <label for="" class="form-label">Name:</label>
+            <input type="text" class="form-control" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Student ID:</label>
+            <input type="text" class="form-control" name="studentIdNumber" required>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Address:</label>
+            <input type="text" class="form-control" name="address" required>
+        </div>
+        <button class="btn btn-primary btn-sm" type="submit">Save profile</button>
+    </form>
+</section>
+@endsection

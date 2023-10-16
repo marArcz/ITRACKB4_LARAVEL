@@ -22,7 +22,7 @@ class AdminProfileController extends Controller
      */
     public function create()
     {
-        view('admin.profile.create');
+        return view('admin.profile.create');
     }
 
     /**
@@ -35,7 +35,7 @@ class AdminProfileController extends Controller
         $studentIdNumber = $request->input('studentIdNumber');
         $address = $request->input('address');
 
-        dd($name, $studentIdNumber);
+        dd($name, $studentIdNumber, $address);
     }
 
     /**
@@ -51,15 +51,19 @@ class AdminProfileController extends Controller
      */
     public function edit(string $id)
     {
-        return view('admin.profile.edit');
+        return view('admin.profile.edit', ['id' => $id]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id=null)
+    public function update(Request $request, string $id)
     {
-        //
+        $name = $request->input('name');
+        $studentIdNumber = $request->input('studentIdNumber');
+        $address = $request->input('address');
+
+        dd($id, $name, $studentIdNumber, $address);
     }
 
     /**

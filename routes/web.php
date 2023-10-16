@@ -24,9 +24,7 @@ Route::get('/about', [AboutUsController::class, 'index'])->name('about');
 Route::prefix('/admin')
     ->name('admin.')
     ->group(function () {
-
         Route::get('/home', [AdminHomeController::class, 'index'])->name('home');
-        Route::get('/profile/{id?}/{dob?}', [AdminProfileController::class, 'show'])->name('profile');
         Route::resource('profile',AdminProfileController::class);
     });
 
