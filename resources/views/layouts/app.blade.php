@@ -3,7 +3,7 @@
 
 @include('layouts.header')
 
-<title>{{ $title }}</title>
+<title>{{ $title ?? "JRU" }}</title>
 <body>
 
     @include('layouts.nav')
