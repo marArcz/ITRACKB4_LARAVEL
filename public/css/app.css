@@ -1,20 +1,37 @@
-nav {
+:root{
+    --navbar-height:10vh;
+}
+
+body{
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-image: url('../assets/jru_banner.png');
+    background-size: cover;
+
+}
+
+nav.navbar {
     display: flex;
     gap: 50px;
-    background-color: rgb(255, 255, 255);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 50px;
+    /* background: rgba(10, 10, 10, 0.3); */
+    background: white;
     font-size: 20px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    box-shadow: 1px 3px 3px rgba(248, 235, 235, 0.5);
+    box-sizing: border-box;
+    min-height: var(--navbar-height);
 }
 
 section.main-content{
-    margin-top: 15vh;
+    margin-top: var(--navbar-height);
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box !important;
 }
 
 a {
@@ -27,23 +44,24 @@ a {
 }
 
 .home-welcome{
-    height: 100vh;
+    min-height: 100vh !important;
+    padding: 0 !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex;
 }
 
 .welcome_p {
-    font-size: 55px;
+    font-size: 50px;
     text-align: left;
-    padding-left: 20px;
-    padding-right: 20rem;
     font-weight: bold;
     color: white;
 }
 
 .title_sub{
     color: white;
-    padding-right: 20rem;
-    padding-left: 20px;
-
     font-size: 25px;
 }
 
@@ -76,8 +94,12 @@ a {
     font-size: 30px;
     font-weight: bold;
     padding-left: 20px;
+}
 
+.home-row{
+    height: calc(100vh - --navbar-height) !important;
+}
 
-
-
+.full-height{
+    height: 100%;
 }

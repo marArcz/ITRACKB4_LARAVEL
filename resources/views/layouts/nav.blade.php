@@ -1,5 +1,5 @@
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
+    <div class="container">
         <a class="navbar-brand" href="#">
 
             <img width="50px" class="img-fluid mx-auto" src="{{ asset('assets/jru_logo.png') }}" alt="">
